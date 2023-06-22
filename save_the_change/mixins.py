@@ -2,7 +2,7 @@
 
 from __future__ import division, absolute_import, print_function, unicode_literals
 
-from collections import Mapping
+from collections.abc import Mapping
 from copy import copy, deepcopy
 from datetime import date, time, datetime, timedelta, tzinfo
 from decimal import Decimal
