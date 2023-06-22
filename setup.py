@@ -11,7 +11,7 @@ except ImportError:
 
 install_requires = []
 for line in open('requirements.txt', 'rb').readlines():
-	if line and line not in '\n' and not line.startswith(('#', '-')):
+	if line and line != '\n' and not line.startswith(('#', '-')):
 		install_requires.append(line.replace('\n', ''))
 
 setup(
