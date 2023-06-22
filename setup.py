@@ -10,7 +10,7 @@ except ImportError:
 	from distutils.core import setup
 
 install_requires = []
-for line in open('requirements.txt', 'rU').readlines():
+for line in open('requirements.txt', 'rb').readlines():
 	if line and line not in '\n' and not line.startswith(('#', '-')):
 		install_requires.append(line.replace('\n', ''))
 
@@ -18,11 +18,11 @@ setup(
 	name="save_the_change",
 	version=save_the_change.__version__,
 	description="Automatically save only changed model data.",
-	long_description="\n\n".join([open('README.rst', 'rU').read(), open('HISTORY.rst', 'rU').read()]),
+	long_description="\n\n".join([open('README.rst', 'rb').read(), open('HISTORY.rst', 'rb').read()]),
 	author=save_the_change.__author__,
 	author_email=save_the_change.__contact__,
 	url=save_the_change.__homepage__,
-	license=open('LICENSE', 'rU').read(),
+	license=open('LICENSE', 'rb').read(),
 	packages=['save_the_change'],
 	package_dir={'save_the_change': 'save_the_change'},
 	package_data={'': ['README.rst', 'HISTORY.rst', 'LICENSE']},
